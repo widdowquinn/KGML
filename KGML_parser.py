@@ -1,3 +1,32 @@
+# (c) The James Hutton Institute 2013
+# Author: Leighton Pritchard
+#
+# Contact:
+# leighton.pritchard@hutton.ac.uk
+#
+# Leighton Pritchard,
+# Information and Computing Sciences,
+# James Hutton Institute,
+# Errol Road,
+# Invergowrie,
+# Dundee,
+# DD6 9LH,
+# Scotland,
+# UK
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 """ This module provides classes and functions to parse a KGML pathway map
 
 The KGML pathway map is parsed into the object structure defined in  
