@@ -1,6 +1,6 @@
 """ This module provides classes and functions to parse a KGML pathway map
 
-The KGML pathway map is parsed into the object structure defined in  
+The KGML pathway map is parsed into the object structure defined in
 KGML_Pathway.py in this module.
 
 Classes
@@ -21,8 +21,9 @@ try:
 except ImportError:
     import xml.etree.ElementTree as ElementTree
 
+
 def read(handle, debug=0):
-    """ Returns a single Pathway object.  There should be one and only 
+    """ Returns a single Pathway object.  There should be one and only
         one pathway in each file, but there may well be pathological
         examples out there.
     """
@@ -41,11 +42,12 @@ def read(handle, debug=0):
         raise ValueError("More than one pathway found in handle")
     return first
 
+
 def parse(handle, debug=0):
     """ Returns an iterator over Pathway elements
 
         handle               file handle to a KGML file for parsing
-        debug                integer for amount of debug information 
+        debug                integer for amount of debug information
                               to print
         This is a generator for the return of multiple Pathway objects.
     """
@@ -59,14 +61,15 @@ def parse(handle, debug=0):
             raise Exception(exc_txt)
     # Parse XML and return each Pathway
     for event, elem in \
-            ElementTree.iterparse(handle, events=('start','end')):
+            ElementTree.iterparse(handle, events=('start', 'end')):
         if event == "end" and elem.tag == "pathway":
             yield KGMLParser(elem).parse()
             elem.clear()
 
+
 class KGMLParser(object):
     """ Parse a KGML XML Pathway entry into a Pathway object
-    """ 
+    """
     def __init__(self, elem):
         self.entry = elem
 
@@ -141,7 +144,7 @@ class KGMLParser(object):
                 # This should warn us of any unimplemented tags
                 print "Warning: tag %s not implemented in parser" % element.tag
         return self.pathway
-        
+
 
 if __name__ == '__main__':
     # Check large metabolism
@@ -176,4 +179,3 @@ if __name__ == '__main__':
 
     # Test bounds of pathway
     print pathway.bounds
-    
