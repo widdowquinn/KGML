@@ -4,7 +4,7 @@
 
 The `KGML` module was incorporated into Biopython as of its [1.65 release](https://github.com/biopython/biopython/releases). Further development of the code will now continue there. Please make all pull requests against the latest version of the code in the Biopython GitHub repository, at [https://github.com/biopython/biopython](https://github.com/biopython/biopython)
 
-## Links
+## Links
 
 * [Biopython 1.65 release announcement](http://news.open-bio.org/news/2014/12/biopython-1-65-released/)
 * [Biopython home](http://biopython.org/wiki/Main_Page)
